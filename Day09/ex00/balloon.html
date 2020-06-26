@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+    <style>
+        #ballon{
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            background: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            let colorF = 0;
+            let currentWidth;
+            let color;
+            const ballon = document.getElementById("ballon");
+
+            ballon.onclick = function(){
+               currentWidth = ballon.offsetWidth;
+               if (currentWidth === 420){
+                   ballon.style.width = "200px";
+                   ballon.style.height = "200px";
+                   ballon.style.background = "red";
+                   colorF = 0;
+                   return;
+               }
+               setWidth(10);
+               setColor(1);
+            };
+
+            ballon.onmouseout = function () {
+                currentWidth = ballon.offsetWidth;
+                if (currentWidth === 200){
+                    setColor(0);
+                    return;
+                }
+                setWidth(-5);
+                setColor(0);
+            };
+
+            function setColor(flag) {
+                if (flag === 0)
+                    colorF--;
+                else
+                    colorF++;
+                if (colorF > 2)
+                    colorF = 0;
+                if (colorF < 0)
+                    colorF = 2;
+                switch (colorF) {
+                    case 0: color = "red";
+                        break;
+
+                    case 1: color = "green";
+                        break;
+
+                    case 2: color = "blue";
+                        break;
+
+                }
+                ballon.style.background = color;
+            }
+            function setWidth(width) {
+                ballon.style.width = currentWidth + width + "px";
+                ballon.style.height = currentWidth + width + "px";
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="ballon"></div>
+
+</body>
+</html>

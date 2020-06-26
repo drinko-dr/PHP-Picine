@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        div{
+            position: absolute;
+            left: 20%;
+            top: 30%;
+        }
+        input{
+            padding: 5px;
+        }
+        input[type='number'] {
+            -moz-appearance:textfield;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+        #submit {
+            margin-top: 10px;
+        }
+        #oper{
+            width: 15%;
+            padding: 5px;
+        }
+    </style>
+    <script>
+
+        var leftNum;
+        var oper;
+        var rightNum;
+        var submit;
+
+        window.onload = function () {
+
+            var select = document.getElementById("oper");
+            submit = document.getElementById("submit");
+
+            submit.onclick = function() {
+                leftNum = parseInt( document.getElementById("left").value );
+                rightNum = parseInt( document.getElementById("right").value );
+                oper = select.options[select.selectedIndex].text;
+                if (leftNum < 0 || rightNum < 0 || isNaN(leftNum) || isNaN(rightNum)) {
+                    result("Error :(");
+                    return;
+                }
+                var res = calc();
+                if (res == null)
+                    result("It’s over 9000!");
+                else
+                    result(res);
+            }
+            setInterval("alert('Please, use me...')", 30000);
+        };
+
+        function result(res) {
+            console.log(res);
+            alert(res);
+        }
+        function calc() {
+            switch (oper) {
+                case "+":
+                    return leftNum + rightNum;
+                case "-":
+                    return leftNum - rightNum;
+                case "/":
+                    if (rightNum === 0)
+                        return null;
+                    return leftNum / rightNum;
+                case "%":
+                    if (rightNum === 0)
+                        return null;
+                    return leftNum % rightNum;
+                case "*":
+                    return leftNum * rightNum;
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div>
+    <input type="number" id="left">
+    <select id="oper">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="%">%</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select>
+    <input type="number" id="right">
+    <input id="submit" type="submit" name="submit" value="Try me!">
+</div>
+</body>
+</html>

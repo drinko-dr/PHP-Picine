@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+    <style>
+        #ballon{
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            background: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            let colorF = 0;
+            let currentWidth;
+            let color;
+            const ballon = $('#ballon');
+            ballon.click(function () {
+                currentWidth = ballon.width();
+                if (currentWidth === 420){
+                    ballon.width("200px");
+                    ballon.height("200px");
+                    ballon.css("background", "red");
+                    colorF = 0;
+                    return;
+                }
+                setWidth(10);
+                setColor();
+
+            });
+            ballon.mouseout(function () {
+                currentWidth = ballon.width();
+                if (currentWidth === 200){
+
+                    setWidth(0);
+                    setColor();
+                    return;
+                }
+                setWidth(-5);
+                setColor();
+            });
+            function setColor() {
+                switch (colorF) {
+                    case 0: color = "red";
+                        break;
+
+                    case 1: color = "green";
+                        break;
+
+                    case 2: color = "blue";
+                        break;
+
+                }
+                ballon.css("background", color);
+            }
+            function setWidth(width) {
+                ballon.width(currentWidth + width + "px" );
+                ballon.height(currentWidth + width + "px" );
+                if (width <= 0)
+                    colorF--;
+                else
+                    colorF++;
+                if (colorF > 2)
+                    colorF = 0;
+                if (colorF < 0)
+                    colorF = 2;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="ballon"></div>
+
+</body>
+</html>

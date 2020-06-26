@@ -1,0 +1,11 @@
+<-------------Doc Color class---------------->
+class Color handle rgb integer color
+
+Instance contructed rgb value like:
+new Color( array( 'rgb' => 12345 ) );
+
+Or red, green, blue constitutives:
+new Color( array( 'red' => 255, 'green' => 255, 'blue' => 255 ) );
+
+Methods 'add(Color $color), sub(), mult()',  take Color class and return new Instance;
+<--------------------------------------------->
