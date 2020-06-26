@@ -1,0 +1,97 @@
+body{
+    width: 1170px;
+    margin: auto;
+
+}
+.menu>li{
+    display: inline-block;
+    padding: 8px 10px;
+}
+.menu>li>a{
+    padding: 16px 18px;
+}
+
+.menu>li:hover{
+    background: #5bbed1;
+    cursor: pointer;
+}
+.menu>li:last-child{
+    border: 0;
+}
+li{
+
+    list-style-type: none;
+}
+.menu{
+    padding: 8px 10px;
+    background: aqua;
+    position: relative;
+    cursor: default;
+    display: inline-block;
+}
+.sub-menu-lvl-1{
+    display: none;
+    padding: 0px;
+    background: #5bbed1;
+    left: 0px;
+    width: 170px;
+    position: absolute;
+    top: 34px;
+}
+.sub-menu-lvl-1>li{
+    padding: 14px 0px;
+    border-bottom: 2px solid black;
+}
+.sub-menu-lvl-1>li:hover{
+    background: #ace6f1;
+}
+
+.sub-menu-lvl-1>li>.sub-menu{
+    cursor: pointer;
+}
+.sub-menu-lvl-1 a{
+    padding: 13px 45px;
+}
+
+
+.sub-menu-lvl-2{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 170px;
+    left: 170px;
+    padding: 0;
+    background: #ace6f1;
+}
+.menu>li{
+    position: relative;
+    margin-left: 10px;
+}
+.sub-menu>a{
+    cursor: pointer;
+}
+.sub-menu:hover>.sub-menu-lvl-1{
+    display: block;
+}
+.del{
+    padding: 10px 0px;
+    border-right: 2px solid black;
+}
+.sub-menu-lvl-1>.sub-menu{
+
+    position: relative;
+}
+.sub-menu-lvl-1>.sub-menu:hover>.sub-menu-lvl-2{
+    display: block;
+}
+.sub-menu-lvl-2 a{
+    padding: 14px 37px;
+    cursor: pointer;
+}
+.sub-menu-lvl-2>li{
+    padding: 14px 0px;
+    border-bottom: 2px solid black;
+}
+.sub-menu-lvl-2>li:hover{
+    background: #3ccfeb;
+}

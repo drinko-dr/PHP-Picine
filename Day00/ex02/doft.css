@@ -1,0 +1,178 @@
+.top {
+    margin: auto;
+    height: auto;
+    background-color: #909090;
+    border-radius: 8px;
+    padding: 1%;
+    box-shadow: 7px 9px 8px rgba(0, 0, 0, 1.0);
+    width: 70%
+}
+
+body {
+    background: rgb(80,80,80);
+}
+
+.top>img:first-child {
+    width: 30%;
+}
+
+.top>img:last-child {
+    width: 20%;
+    float: right;
+    display: block;
+    margin-right: -2%;
+}
+
+.imgCLRL {
+    float: right;
+    width: 3%
+}
+
+.imgCLRL img {
+    width: 60%;
+    display: block;
+}
+
+.imgCLRL>a:first-child>img {
+    margin: -15% 0% 200% 60%;
+}
+
+.imgCLRL>a:last-child>img {
+    margin-left: 60%;
+}
+
+.left {
+    width: 6.3%;
+    background-color: #909090;
+    border-radius: 8px;
+    box-shadow: 7px 9px 8px rgba(0, 0, 0, 1.0);
+    text-align: -webkit-center;
+    float: left;
+    padding: 0% 1% 2%;
+}
+
+.left img {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.mid {
+    display: inline-block;
+    margin: 0% 1% 0% 16%;
+}
+
+.mid-img {
+    padding: 0.5%;
+    width: 61%;
+    background-color: #909090;
+    box-shadow: 7px 9px 8px rgba(0, 0, 0, 1.0);
+    float: left;
+    border-radius: 8px;
+    margin-left: 1.5%;
+}
+
+.mid-img img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.right {
+    float: right;
+    margin-right: 18.4%;
+    padding: 0.5%;
+    padding-bottom: 9%;
+    width: 7.3%;
+    background-color: #909090;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 7px 9px 8px rgba(0, 0, 0, 1.0);
+    text-align: -webkit-center;
+}
+
+.right img {
+    width: 70%;
+}
+
+.bricks {
+    display: block;
+    background: url(resources/brick.jpg);
+    background-repeat: repeat;
+    background-size: 26%;
+}
+
+.bricks img {
+    visibility: hidden;
+    width: 27%;
+    margin: 0% 30%;
+}
+
+.bottom{
+    background: rgb(136,255,137);
+    border-radius: 10px;
+    margin: 0% 1% 0% 12%;
+    display: inline-block;
+    width: 24%;
+    height: auto;
+    z-index: 4;
+    margin-top: -6%;
+    box-shadow: 10px 10px 5px black;
+    padding: 1% 1% 3%;
+}
+
+.bottom span{
+    font-size: 0.8vw;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+.bottom p{
+    margin: 0;
+}
+#entrez{
+    font-size: 1.5vw;
+}
+#ordi{
+    text-shadow: 6px 6px 4px red;
+}
+#end_text{
+    font-style: italic;
+}
+.input_text > input{
+    width: 73%;
+    font-size: 0.8vw;
+}
+.input_text > button {
+    margin-left: 10px;
+    font-size: 0.8vw;
+}
+.input_text{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#cheir{
+    padding: 2px;
+    width: 10%;
+    height: 105px;
+    float: right;
+    margin-top: -23%;
+    margin-right: 57%;
+    position: relative;
+    z-index: 99;
+}
+#monitor{
+    right: 26%;
+    padding: 2px;
+    width: 10%;
+    height: 77px;
+    margin-top: 16%;
+    position: absolute;
+
+    z-index: 99;
+}
+
+#sqr{
+    border: 4px solid red;
+    border-radius: 6px;
+}

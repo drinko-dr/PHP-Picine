@@ -1,0 +1,106 @@
+.colorGreen {
+    background-color: rgb(160, 255, 160);
+}
+
+.colorRed {
+    background-color: rgb(255, 102, 102);
+}
+
+.colorBrew {
+    background-color: rgb(255, 222, 173);
+}
+
+.colorPink {
+    background-color: rgb(255, 192, 192);
+}
+
+.colorGrey {
+    background-color: rgb(204, 204, 204);
+}
+
+.colorDarkGreen {
+    background-color: rgb(204, 204, 153);
+}
+
+.colorYellow {
+    background-color: rgb(255, 255, 153);
+}
+
+.colorSert {
+    background-color: rgb(255, 191, 255);
+}
+
+.colorFiol {
+    background-color: rgb(239, 153, 204);
+}
+
+.colorBlue {
+    background-color: rgb(192, 255, 255);
+}
+
+.pos {
+    margin-right: 5px;
+}
+
+.pos2 {
+    display: grid;
+}
+
+.pos2>sup {
+    text-align: right;
+}
+caption{
+    font-size: 0.8vw;
+}
+
+tr>td:first-child{
+    font-size: 1vw;
+    text-align: center;
+}
+sup {
+    order: 0;
+    font-size: 0.8vw;
+}
+
+sub {
+    font-size: 0.8vw;
+    order: 2;
+    text-align: left;
+    margin-left: 16%;
+    margin-top: -2%;
+}
+
+i {
+    font-size: 0.8vw;
+}
+
+.tableC {
+    width: 100%;
+    /*border-collapse: collapse;*/
+}
+
+td {
+    font-size: 0.8vw;
+    text-align: center;
+}
+
+th {
+    width: 100vw;
+    font-size: 0.8vw;
+}
+
+h2 {
+    order: 1;
+    font-size: 1vw;
+    text-align: center;
+    margin: 0px!important;
+}
+.img{
+margin-left: 150px;
+}
+
+.img > img{
+
+    width: 8vw;
+    height: 9vw;
+}
